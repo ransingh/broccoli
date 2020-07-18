@@ -1,0 +1,168 @@
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'script/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+  TargetRubyVersion: 2.6.5
+
+require: rubocop-rails
+
+# We sort our gems in groups
+Bundler/OrderedGems:
+  Enabled: True
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+Layout/ArrayAlignment:
+  Enabled: false
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/LineLength:
+  Max: 120
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+Metrics/ClassLength:
+  Max: 300
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ModuleLength:
+  Max: 300
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/MethodLength:
+  Max: 25
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 25
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/RedundantAssignment:
+  Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: false
+
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+
+Style/RedundantRegexpEscape:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: true
+
+# we don't use rdoc
+Style/Documentation:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/PercentLiteralDelimiters:
+ Enabled: true
+ PreferredDelimiters:
+   '%':  '()'
+   '%i': '()'
+   '%q': '()'
+   '%Q': '()'
+   '%r': '{}'
+   '%s': '()'
+   '%w': '()'
+   '%W': '()'
+   '%x': '()'
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+# ==== Rails Cops ====
+Rails/SkipsModelValidations:
+  Enabled: true
+
+Rails/SaveBang:
+  Enabled: true
+
+Rails/HttpStatus:
+  EnforcedStyle: numeric
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
