@@ -1,7 +1,0 @@
-example_id                                 | status  | run_time        |
------------------------------------------- | ------- | --------------- |
-./spec/models/expense_account_spec.rb[1:1] | pending | 0.00001 seconds |
-./spec/models/expense_spec.rb[1:1]         | pending | 0 seconds       |
-./spec/models/fund_spec.rb[1:1]            | pending | 0 seconds       |
-./spec/models/recurrence_spec.rb[1:1]      | pending | 0.00001 seconds |
-./spec/models/user_spec.rb[1:1]            | pending | 0.00001 seconds |
