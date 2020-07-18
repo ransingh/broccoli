@@ -32,6 +32,10 @@ gem 'seed-fu', '~> 2.3'
 # configuration
 gem 'config'
 
+# GraphQL
+gem 'graphiql-rails'
+gem 'graphql'
+
 # # tag stories(region,places,point of interest)
 # gem 'acts-as-taggable-on', '~> 6.0'
 
@@ -58,7 +62,7 @@ group :test do
   gem 'guard'
   gem 'guard-rspec', require: false
   gem 'rspec'
-  # gem 'rspec-graphql_matchers'
+  gem 'rspec-graphql_matchers'
   gem 'rspec-rails'
   gem 'simplecov', require: false
 end
